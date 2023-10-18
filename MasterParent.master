@@ -1,0 +1,271 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterParent.master.cs" Inherits="MasterParent" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <title>Sushil IVF | The Best Fertility Center in Sangli, Maharashtra.</title>
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+
+    <link href="css/sushilivf.css" rel="stylesheet" />
+    <script src="<%= rootPath+"js/jquery-2.2.4.min.js" %>"></script>
+
+    <link href="<%= rootPath+ "css/jquery.fancybox.css" %>" rel="stylesheet" />
+    <script src="<%= rootPath+"js/jquery.fancybox.js" %>"></script>
+
+
+    <%-- Tost Notification --%>
+    <link href="css/toastr.css" rel="stylesheet" />
+    <script src="js/toastr.js"></script>
+
+    <script type="text/javascript">
+        function TostTrigger(EventName, MsgText) {
+            // code to be executed
+            Command: toastr[EventName](MsgText)
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-full-width",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "slideDown",
+                "hideMethod": "fadeOut"
+            }
+
+        }
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!-- Header Starts -->
+    <div id="header" class="width100">
+        <div class="themeBgPrime">
+            <div class="pad_5">
+                <div class="col_1140">
+                    <a href="tel:+919370036835" class="topCall">+91 9370036835</a>
+                    <div class="socialBox">
+                        <a href="#" target="_blank" class="topFb" title="Follow Us on facebook"></a>
+                        <a href="#" target="_blank" class="topInsta" title="Follow Us on Instagram"></a>
+                        <a href="#" target="_blank" class="topyouTube" title="Follow Us on youtube"></a>
+                    </div>
+                    <div class="float_clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="pad_TB_15">
+            <div class="col_1140 posRelative">
+                <a href="<%=rootPath %>" title="Sushil IVF - The Fertility Center" class="txtDecNone">
+                    <%--<img src="<%= rootPath +"images/sushil-ivf-logo.png" %>=" alt="Sushil IVF - The Fertility Center" class="logo" />--%>
+                    <img src="<%= rootPath +"images/sushil-ivf-logo.png" %>" alt="Sushil IVF - The Fertility Center" class="logo" />
+                </a>
+                <a href="<%= rootPath +"online-appointment" %>" class="btnAppointment semiBold upperCase letter-sp-2">Book Appointment Now</a>
+                <div id="nav">
+                    <div id="topNavPanel">
+                        <div class="col_1140">
+                            <ul id="topNav">
+                                <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
+                                <li><a href="<%=rootPath %>">Home</a></li>
+                                <li>
+                                    <a class="subNav">About Us</a>
+                                    <ul>
+                                        <li><a href="<%= rootPath +"about-us" %>">About Hospital</a></li>
+                                        <li><a href="<%= rootPath +"doctors" %>">Our Doctors</a></li>
+                                        <li><a href="testimonials">Testimonials</a></li>
+                                        <%--<li><a href="#">FAQs</a></li>--%>
+                                        <li><a href="#">Case Studies</a></li>
+                                        <li><a href="<%= rootPath +"news" %>">News</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="<%=rootPath + "infertility" %>">Infertility</a></li>
+                                <li>
+                                    <a href="<%= rootPath+"services" %>" class="subNav">Treatments</a>
+                                    <ul>
+                                        <li><a href="<%= rootPath +"services#iui" %>">IUI</a></li>
+                                        <li><a href="<%= rootPath +"services#icsi" %>">ICSI</a></li>
+                                        <li><a href="<%= rootPath +"services#fet" %>">FET</a></li>
+                                        <li><a href="<%= rootPath +"services#od" %>">OD</a></li>
+                                        <li><a href="<%= rootPath +"services#embdon" %>">EMBRYO DONATION</a></li>
+                                        <li><a href="<%= rootPath +"services#spermdon" %>">SPERM DONATION</a></li>
+                                        <li><a href="<%= rootPath +"services#cryopre" %>">CYRO PRESERVATION</a></li>
+                                        <li><a href="<%= rootPath +"services#surgcy" %>">SURROGACY</a></li>
+                                        <li><a href="<%= rootPath +"services#ivf" %>">IVF</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="<%=rootPath + "facilities" %>">Facilities</a></li>
+                                <li><a href="<%= rootPath + "contact-us" %>">Contact Us</a></li>
+                            </ul>
+                            <div class="float_clear"></div>
+                            <div id="mobNav">
+                                <div class="pad_30">
+                                    <span class="tiny upperCase clrWhite letter-sp-3 mrg_B_15">Phone:</span>
+                                    <a href="tel:+919999999999" class="medium clrWhite light txtDecNone">+91 9999999999</a>
+                                    <span class="space30"></span>
+                                    <span class="tiny upperCase clrWhite letter-sp-3 mrg_B_15">Email:</span>
+                                    <a href="mailto:sushilhospitals@gmail.com" class="clrWhite breakWord txtDecNone">sushilhospitals&#64;gmail&#46;com</a>
+                                    <span class="space30"></span>
+                                    <span class="tiny upperCase clrWhite letter-sp-3 mrg_B_15">Follow Us:</span>
+                                    <a href="#" target="_blank" class="fb socIco" title="Follow us on facebook"></a>
+                                    <a href="#" target="_blank" class="insta socIco" title="Follow us on instagram"></a>
+                                    <a href="#" target="_blank" class="youTube socIco" title="Follow us on Youtube"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="float_clear"></div>
+                    <a id="navBtn" onclick="openNav()"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Ends -->
+    <form id="form1" runat="server" autocomplete="off">
+        <div>
+            <asp:ScriptManager runat="server">
+        </asp:ScriptManager>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <!-- Footer Starts -->
+        <div class="footer">
+            <span class="space20"></span>
+            <div class="col_1140">
+                <div class="col_1_4">
+                    <div class="pad_15">
+                        <h4 class="footerCaption clrWhite mrg_B_10 semiBold upperCase letter-sp-2">Navigation</h4>
+                        <div class="fLine mrg_B_15"><span class="fAbsLine"></span></div>
+                        <ul class="footerNav">
+                            <li><a href="<%=rootPath %>">Home</a></li>
+                            <li><a href="<%= rootPath +"about-us" %>">About Us</a></li>
+                            <li><a href="<%= rootPath +"doctors" %>">Our Doctors</a></li>
+                            <li><a href="<%= rootPath +"online-appointment" %>">Appointment</a></li>
+                            <%--<li><a href="#">FAQs</a></li>--%>
+                            <li><a href="#">Case Studies</a></li>
+                            <li><a href="infertility">Infertility</a></li>
+                            <li><a href="<%=rootPath + "facilities" %>">Facilities</a></li>
+                            <li><a href="<%= rootPath +"contact-us" %>">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col_1_4">
+                    <div class="pad_15">
+                        <h4 class="footerCaption clrWhite mrg_B_10 semiBold upperCase letter-sp-2">Treatments</h4>
+                        <div class="fLine mrg_B_15"><span class="fAbsLine"></span></div>
+                        <ul class="footerNav">
+                            <li><a href="<%= rootPath +"services#iui" %>">IUI</a></li>
+                            <li><a href="<%= rootPath +"services#ivf" %>">IVF</a></li>
+                            <li><a href="<%= rootPath +"services#icsi" %>">ICSI</a></li>
+                            <li><a href="<%= rootPath +"services#fet" %>">FET</a></li>
+                            <li><a href="<%= rootPath +"services#od" %>">OD</a></li>
+                            <li><a href="<%= rootPath +"services#embdon" %>">Embryo Donation</a></li>
+                            <li><a href="<%= rootPath +"services#spermdon" %>">Sperm Donation</a></li>
+                            <li><a href="<%= rootPath +"services#cryopre" %>">Cyro Preservation</a></li>
+                            <li><a href="<%= rootPath +"services#surgcy" %>">Surrogacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col_1_4">
+                    <div class="pad_15">
+                        <h4 class="footerCaption clrWhite mrg_B_10 semiBold upperCase letter-sp-2">Get Social</h4>
+                        <div class="fLine mrg_B_15"><span class="fAbsLine"></span></div>
+                        <a href="#" target="_blank" class="foo_fb foo_socialIco" title="Follow us on facebook"></a>
+                        <a href="#" target="_blank" class="foo_youTube foo_socialIco" title="Follow us on youtube"></a>
+                        <a href="#" target="_blank" class="foo_insta foo_socialIco" title="Follow us on Instagram"></a>
+                    </div>
+                </div>
+                <div class="col_1_4">
+                    <div class="pad_15">
+                        <h4 class="footerCaption clrWhite mrg_B_10 semiBold upperCase letter-sp-2">Contact Info</h4>
+                        <div class="fLine mrg_B_15"><span class="fAbsLine"></span></div>
+                        <span class="semiBold mrg_B_10">Sushil Hospital</span>
+                        <span class="addr line-ht-5 small">Sangli - Miraj Road, Neminath Nagar, Vishrambag, Sangli, Maharashtra 416415</span>
+                        <span class="space15"></span>
+                        <a href="mailto:sushilhospitals@gmail.com" class="email line-ht-5 small txtDecNone breakWord">frontdesk&#64;sushilivf&#46;com</a>
+                        <span class="space15"></span>
+                        <a href="tel:(0233)2302295" class="foo_call line-ht-5 small txtDecNone">(0233) 2302295</a>
+                    </div>
+                </div>
+                <div class="float_clear"></div>
+            </div>
+            <span class="space20"></span>
+            <span class="footerLine"></span>
+            <div class="col_1140 txtCenter">
+                <div class="pad_15">
+                    <span class="clrGrey mrg_B_5 small fontRegular">&copy; <%= currentYear %> | Sushil Hospital, All Rights Reserved</span>
+                    <span class="clrGrey small fontRegular">Website By <a href="http://www.intellect-systems.com" target="_blank" class="intellect" title="Website Design and Development Service By Intellect Systems">Intellect Systems</a></span>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Ends -->
+
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById("topNavPanel").style.width = "320px";
+            document.getElementById("navBtn").style.zIndex = "0";
+        }
+
+        function closeNav() {
+            document.getElementById("topNavPanel").style.width = "0";
+            document.getElementById("navBtn").style.zIndex = "5";
+        }
+    </script>
+    <script type="text/javascript">
+        // Select all links with hashes
+        $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function (event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname == this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function () {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
+    </script>
+</body>
+</html>

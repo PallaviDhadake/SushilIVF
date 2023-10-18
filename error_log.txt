@@ -1,0 +1,41 @@
+24/03/2022 03:44 PM
+ASP.adminpanel_default_aspx
+cmdSign_Click
+Login failed for user 'dranilma_adminSushil'.
+
+
+10/11/2022 01:26 PM
+ASP.adminpanel_default_aspx
+cmdSign_Click
+Cannot open database "SushilIvf" requested by the login. The login failed.
+Login failed for user 'DESKTOP-HTQJ6BN\dc'.
+
+
+29/11/2022 01:39 PM
+ASP.adminpanel_default_aspx
+cmdSign_Click
+Cannot open database "SushilIvf" requested by the login. The login failed.
+Login failed for user 'DESKTOP-HTQJ6BN\dc'.
+
+
+29/11/2022 01:40 PM
+ASP.adminpanel_default_aspx
+cmdSign_Click
+Cannot open database "SushilIvf" requested by the login. The login failed.
+Login failed for user 'DESKTOP-HTQJ6BN\dc'.
+
+
+03/12/2022 03:01 PM
+ASP.adminpanel_default_aspx
+cmdSign_Click
+Cannot open database "SushilIvf" requested by the login. The login failed.
+Login failed for user 'DESKTOP-HTQJ6BN\dc'.
+
+
+03/12/2022 03:01 PM
+ASP.adminpanel_default_aspx
+cmdSign_Click
+Cannot open database "SushilIvf" requested by the login. The login failed.
+Login failed for user 'DESKTOP-HTQJ6BN\dc'.
+
+
